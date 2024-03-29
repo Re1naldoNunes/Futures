@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/estilos/style.css">
+    <title>Future</title>
+</head>
+
+<body>
+    {{#if messages.success}}
+    <div class="alert alert-success">
+        {{messages.success}}
+    </div>
+    {{/if}}
+
+    {{#if messages.error}}
+    <div class="alert alert-danger">
+        {{messages.error}}
+    </div>
+    {{/if}}
+
+    {{{body}}}
+
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/functions/scripts.js"></script>
+</body>
+
+</html>

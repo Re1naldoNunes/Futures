@@ -1,0 +1,31 @@
+<div id="div-video" class="background-video">
+    <video id="background-video" loop>
+        <source src="/imagens/future/login.mp4" type="video/mp4">
+    </video>
+    <div class="text-center" id="mensagem">Criando tunel do tempo</div>
+</div>
+
+
+<div class="container text-white">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2 class="text-center">Login</h2>
+            <form id="form-login" action="login" method="POST"
+                onsubmit="return showAnimation('mensagem', 'form-login', 'div-video', 'background-video' )">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" name="senha" required>
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <a href="/users" class="btn btn-secondary me-2">Voltar</a>
+                    <a href="cadastro" class="btn btn-success me-2">Registrar</a>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

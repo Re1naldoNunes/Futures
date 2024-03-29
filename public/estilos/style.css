@@ -1,0 +1,61 @@
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes backgroundScroll {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.home {
+    background-image: url('/imagens/future/home.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    animation: backgroundScroll 10s linear infinite;
+}
+
+.cadastro {
+    background-image: url('/imagens/future/cadastro.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    animation: backgroundScroll 10s linear infinite;
+}
+
+#mensagem {
+    display: none;
+    position: fixed;
+    font-size: 6rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    color: rgba(56, 98, 160, 0.5);
+    z-index: 9999;
+}

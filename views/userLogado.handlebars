@@ -1,0 +1,47 @@
+<div id="div-video" class="background-video">
+    <video id="background-video" loop>
+        <source src="/imagens/future/usuarioLogado.mp4" type="video/mp4">
+    </video>
+    <div class="text-center" id="mensagem">Buscando respostas do futuro</div>
+</div>
+
+{{> nav-user}}
+
+<!-- Conteúdo -->
+<div class="jumbotron text-center text-white">
+    <h1 class="display-4">Bem-vindo, {{usuario.nome}}!</h1>
+    <p class="lead">Clique no botão abaixo para ver seu futuro e seu número da sorte.</p>
+    <div class="d-flex justify-content-center">
+        <form id="form-associar" action="/future/associar/{{usuario.id}}" method="post"
+            onsubmit="return showAnimation('mensagem', 'form-associar', 'div-video', 'background-video' )">
+            <button type="submit" class="btn btn-primary" id="btnFuturo">Ver Futuro</button>
+        </form>
+        <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#createFutureModal">Criar
+            Futuro</button>
+    </div>
+</div><br>
+
+<!-- Card do Futuro -->
+<div class="d-flex justify-content-center">
+    {{#if usuario.futurosAssociado}}
+    {{#each usuario.futurosAssociado}}
+    <div class="card text-white bg-dark" style="width: 18rem;">
+        <div class="card-body text-center">
+            <h3 class="card-title">Seu Futuro:</h3>
+            <p class="card-text" id="fraseFuturo">{{this.frase}}</p>
+            <h6 class="card-subtitle mb-2">Seu Número da Sorte é</h6>
+            <p class="card-text" id="numeroSorte">{{this.numero}}</p>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body text-center">
+            <h5 class="card-title">Seu Futuro</h5>
+            <p class="card-text">Você ainda não tem um futuro.</p>
+        </div>
+    </div>
+    {{/if}}
+</div>
+
+{{> modal-future-users}}

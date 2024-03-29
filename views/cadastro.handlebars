@@ -1,0 +1,31 @@
+<div class="cadastro">
+    <div class="row justify-content-center text-white">
+        <div class="col-md-6">
+            <h2 class="text-center">Cadastro</h2>
+            <form action="cadastro" method="POST" onsubmit="return validarSenha('senha', 'senhaConfirm');">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" class="form-control" id="senha" name="senha" required>
+                </div>
+                <div class="form-group">
+                    <label for="senhaConfirm">Confirme a Senha:</label>
+                    <input type="password" class="form-control" id="senhaConfirm" name="senhaConfirm" required>
+                </div><br>
+                <div class="d-flex justify-content-center">
+                    <a href="/users" class="btn btn-secondary me-2">Voltar</a>
+                    <a href="login" class="btn btn-success me-2">Login</a>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
